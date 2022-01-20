@@ -1,0 +1,17 @@
+<div class="new-post col-md-8 form-group mx-auto">
+  <%- include('../includes/validationErrors.ejs') %>
+    <form method="post" action="/dashboard/add-post">
+        <input placeholder="post title" class="form-control col-12" name="title" type="text">
+        <label for="status"></label>
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">post status</label>
+            <select name="status" class="form-control" id="exampleFormControlSelect1">
+              <option value="public">public</option>
+              <option value="private">private</option>
+            </select>
+          </div>
+        <textarea placeholder="caption" class="form-control col-12" name="desc" id=""></textarea>
+        <button class="btn btn-dark mt-1" type="submit">Add Post</button>
+        <a href="/dashboard" class="btn btn-warning mt-1">lapse</a>
+    </form>
+</div>

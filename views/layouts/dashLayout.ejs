@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ckeditor/4.17.1/ckeditor.js" 
+    integrity="sha512-VXEKi5eNc7ECuyIueuledlqeUWiJ7hcxBe9fnsCiVzeZ0XwJxAPemnq01/LBIBnp3i0szhvKNd9Us7fqNPsRmQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="/css/font-awesome.css">
+    <link rel="shortcut icon" href="/Aha-Soft-3d-Social-Blog.ico" type="image/x-icon">
+    <% if(path == '/dashboard' || path == '/dashboard/add-post') {%>
+        <link rel="stylesheet" href="/css/dashboard.css">
+    <% } %>
+    <title><%= pageTitle %> </title>
+
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#">hello<%=' ' + fullname %> </a>
+      <input class="form-control form-control-dark w-100" type="text" placeholder="Search" aria-label="Search">
+      <ul class="navbar-nav px-3">
+        <li class="nav-item text-nowrap">
+          <a class="nav-link" href="/users/logout">Sign out</a>
+        </li>
+      </ul>
+    </nav>
+
+  <div class="container-fluid"> 
+    <div class="row">
+      <%- include('../private/dashSidebar.ejs') %>
+        <main role="main" class="col-md-10 ml-sm-auto col-lg-10 d-flex justify-content-center">
+          <%- body %>
+        </main>
+      </div>
+    </div>
+    <script>
+      CKEDITOR.replace('desc', {
+        language: 'fa',
+      })
+    </script>
+    <script src="/js/jquery.slim.min.js"></script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

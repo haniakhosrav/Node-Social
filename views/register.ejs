@@ -1,0 +1,26 @@
+  <body class="text-center"> 
+    <form action="/users/register" method="POST"  class="form-signin col-md-5 mx-auto mt-5">
+      <h1 class="h3 mb-3 font-weight-normal">Registeration</h1>
+      <%- include('./includes/validationErrors') %>
+      <label for="inputFullname" class="sr-only">Name and FamillyName</label>
+      <input name="fullname" id="inputFullname" class="form-control" placeholder="name and family" required autofocus>
+
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input name="email" type="email" id="inputEmail" class="form-control mt-1" placeholder="Email address" required>
+
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input name="password" type="password" id="inputPassword" class="form-control mt-1" placeholder="Password" required>
+
+      <label for="inputConfirmPassword" class="sr-only">Confirm Password</label>
+      <input name="confirmPassword" type="password" id="inputConfirmPassword" class="form-control mt-1" placeholder="Confirm Password" required>
+
+      <div class="checkbox mb-3">
+        <label>
+          <a href="/users/login">already have an account</a>
+        </label>
+      </div>
+
+      <button class="btn btn-lg btn-outline-secondary btn-block" type="submit">Sign in</button>
+      <p class="mt-5 mb-3 text-muted">&copy; 2017-2018</p>
+    </form>
+  </body>

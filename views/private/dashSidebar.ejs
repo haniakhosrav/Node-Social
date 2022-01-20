@@ -1,0 +1,22 @@
+<nav class="col-md-2 d-none d-md-block bg-light sidebar">
+    <div class="sidebar-sticky">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link rounded-0 border-0 d-flex align-items-center btn btn-outline-secondary
+          <%= path == '/dashboard' ? 'active' : '' %>" 
+          href="/dashboard">
+            <span class="fa fa-home mr-1"></span>
+            <span class="">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item mt-1">
+          <a class="nav-link rounded-0 border-0 d-flex align-items-center btn btn-outline-secondary
+          <%= path == '/dashboard/add-post' ? 'active' : '' %>" 
+          href="/dashboard/add-post">
+            <span class="fa fa-plus mr-1"></span>
+            <span class="">Add new post</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>

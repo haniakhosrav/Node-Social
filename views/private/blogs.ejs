@@ -1,0 +1,15 @@
+<div class="col-md-12 d-flex justify-content-start flex-wrap">
+    <% if(posts.length > 0) { %>  
+    <% for(let post of posts) { %> 
+        <div class="mx-1 d-inline-block bg-light rounded mt-2 p-2 col-md-5 post">
+            <span class="title"><%= post.title %></span>
+            <span class="rounded p-1 status <%= post.status == 'private' ? 'badge-warning' : 'badge-success'%> "><%= post.status %> </span>
+            <br>
+            <span class="date"><%= formatDate(post.createdAt) %> </span>
+            <a href="/blogs/<%= post._id %>" class="btn btn-secondary rounded-0 r-more">Read more</a>
+        </div>
+    <% } %>  
+    <% } else { %> 
+        <div class="mt-5">there isn't any posts yet</div>
+    <% } %>      
+</div>
